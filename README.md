@@ -1,0 +1,3 @@
+El siguiente proyceto hace referencia al desarrollo del siguiente sistema: Sistema del Inventario y Vnentas
+Este sistema tendra los modulos de compra y ventas y por ello entonces se podra administrar el inventario por medio de un control de inventario. Dicha gestion de inventario administra las entradas de producto (compra) saida de producto (ventas) y se podra generar reportes de inventario por stock
+Sistema desarrollado por el aula 3DS
