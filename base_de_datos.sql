@@ -48,7 +48,7 @@ ON p.categoria_id=c.id;
 SELECT P.id , p.nombre_producto, c.nombre_categoria, p.stock, p.precio
 FROM productos p
 INNER JOIN categorias c
-ON p.categoria_id=c.id;
+ON p.categoria_id=c.id
 WHERE c.nombre_categoria = "Accesorios";
 
 
@@ -57,8 +57,7 @@ WHERE c.nombre_categoria = "Accesorios";
 -- Tarjeta 1: Total de artículos distintos en el catálogo (Muestra variedad de productos)
 SELECT COUNT(id) AS total_productos_catalogo FROM productos;
 
--- Tarjeta 2: Valor económico total del inventario (Multiplica precio por existencias de cada fila
-y las suma
+-- Tarjeta 2: Valor económico total del inventario (Multiplica precio por existencias de cada fila y las suma
 SELECT SUM(precio * stock) AS valor_monetario_inventario FROM productos;
 
 -- Tarjeta 3: Precio del producto estrella o de mayor gama del inventario
@@ -70,3 +69,14 @@ FROM productos p
 INNER JOIN categorias c ON p.categoria_id = c.id
 GROUP BY c.nombre_categoria;
 
+CREATE TABLE proveedores (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre_empresa VARCHAR(100) NOT NULL,
+contacto VARCHAR(100),
+telefono VARCHAR(20),
+direccion TEXT
+);
+
+INSERT INTO proveedores (nombre_empresa, contacto, telefono, direccion) VALUES
+('Tech Data El Salvador', 'Juan Pérez', '2255-8899', 'San Salvador, Col. Escalón'),
+('Distribuidora de Papel', 'María Gómez', '2666-4433', 'San Miguel, Centro');
